@@ -2,12 +2,13 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Logo from '../logo/LogoScreen';
 import Input from '../SearchScreen/SearchScreen';
+import Constants from 'expo-constants';
 
-function HeaderScreen() {
+function HeaderScreen({navigation, onPress}) {
   return (
     <View style={styles.container}>
       <Logo />
-      <Input />
+      <Input onPress={onPress} />
     </View>
   );
 }
@@ -19,7 +20,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'flex-start',
     justifyContent: 'space-between',
-    marginTop : 30,
+    marginTop: Constants.statusBarHeight,
     padding: 20
   },
 });

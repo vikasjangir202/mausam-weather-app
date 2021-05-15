@@ -17,17 +17,17 @@ function ForecastBlockScreen() {
         return (
             <View style={styles.container}>
                 <View>
-                    <Text>Today, 15 May</Text>
+                    <Text style={{fontSize:17, fontFamily:'Inter-Black', color:'#313061', marginBottom:20}}>Today, 15 May</Text>
                 </View>
                 <View style={styles.bottomBlock}>
-                    <View>
-                        <Text>9:00 AM</Text>
+                    <View style={{paddingTop:5, paddingBottom:5}}>
+                        <Text style={{fontSize:12, fontFamily:'Inter-Black', color:'#313061'}}>9:00 AM</Text>
                     </View>
-                    <View>
+                    <View style={{paddingTop:5, paddingBottom:5}}>
                         <MaterialCommunityIcons name="weather-hail" size={50} color="white" />
                     </View>
-                    <View>
-                        <Text>28°</Text>
+                    <View style={{paddingTop:5, paddingBottom:5}}>
+                        <Text style={{fontSize:25, fontFamily:'Inter-Black', color:'#313061', fontWeight:'bold'}}>28°</Text>
                     </View>
                 </View>
             </View>
@@ -41,9 +41,16 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 20,
+    padding: 15,
   },
   bottomBlock: {
-    backgroundColor:'#95F6F5'
+    justifyContent:'space-around',
+    alignItems:'center',
+    backgroundColor:'#95F6F5',
+    paddingLeft: 30,
+    paddingRight: 30,
+    paddingTop: 5,
+    paddingBottom: 15,
+    borderRadius:10,
   }
 });

@@ -1,15 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TouchableHighlight, View } from 'react-native';
 import HeaderScreen from '../header/HeaderScreen';
 import WeatherScreen from '../weatherBox/WeatherScreen';
 import Forecast from '../DailyForecast/ForecastScreen';
 
-export default function HomeScreen() {
+export default function HomeScreen({navigation}) {
   return (
       
     <View style={styles.container}>
-        <HeaderScreen />
+        <HeaderScreen onPress={()=>navigation.navigate('Week')} />
         <WeatherScreen />
         <Forecast />
         <StatusBar style="auto" />

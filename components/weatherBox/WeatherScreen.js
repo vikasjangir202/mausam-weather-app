@@ -16,17 +16,17 @@ function WeatherScreen() {
     else {
         return (
         <View style={styles.container}>
-            <MaterialCommunityIcons name="weather-hail" size={150} color="black" />
-            <Text style={{fontSize:17, fontFamily:'Inter-Black'}}>Cloudy</Text>
-            <Text style={{fontSize:70, fontFamily:'Inter-Black'}}>28°</Text>
+            <MaterialCommunityIcons name="weather-hail" size={150} color="#F1C91D" />
+            <Text style={{fontSize:17, fontFamily:'Inter-Black', color:'#313061'}}>Cloudy</Text>
+            <Text style={{fontSize:70, fontFamily:'Inter-Black', color:'#313061',  fontWeight:'bold'}}>28°</Text>
             <View style={{flexDirection:'row', width:'50%', justifyContent:'space-between'}}>
                 <View style={{flexDirection:'row'}}>
-                    <Feather name="wind" size={17} color="black" />
-                    <Text style={{fontSize:17, fontFamily:'Inter-Black'}}> 8 km/h</Text>
+                    <Feather name="wind" size={17} color="#313061" />
+                    <Text style={{fontSize:17, fontFamily:'Inter-Black', color:'#313061'}}> 8 km/h</Text>
                 </View>
                 <View style={{flexDirection:'row'}}>
-                    <Feather name="droplet" size={17} color="black" />
-                    <Text style={{fontSize:17, fontFamily:'Inter-Black'}}> 65 %</Text>
+                    <Feather name="droplet" size={17} color="#313061" />
+                    <Text style={{fontSize:17, fontFamily:'Inter-Black', color:'#313061'}}> 65 %</Text>
                 </View>
             </View>
         </View>

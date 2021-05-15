@@ -1,12 +1,14 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, TouchableHighlight, View } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 
-function SearchScreen(){
+function SearchScreen({navigation, onPress}){
  
     return (
       <View>
-          <AntDesign name="calendar" size={24} color="black" style={{margin:5}} onPress={()=> alert('Hello')} />
+        <TouchableHighlight onPress={onPress}>
+          <AntDesign name="calendar" size={24} color="#313061" style={{margin:5}}  />
+        </TouchableHighlight>
       </View>
     );
 };

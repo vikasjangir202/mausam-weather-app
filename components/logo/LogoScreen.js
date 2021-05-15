@@ -15,9 +15,9 @@ export default function LogoScreen() {
         } else {
             return (
                 <View style={styles.container}>
-                  <Entypo name="location-pin" size={24} color="black" style={{margin:5}} />
-                  <Text style={{fontSize:20, color: '#232634', fontFamily:'Inter-Black', margin:5}}>Sardar Shahar</Text>
-                  <MaterialIcons name="keyboard-arrow-down" size={24} color="black" style={{margin:5}} />
+                  <Entypo name="location-pin" size={24} color="#313061" style={{margin:5}} />
+                  <Text style={{fontSize:20, color: '#313061', fontFamily:'Inter-Black', margin:5, fontWeight:'bold'}}>Sardar Shahar</Text>
+                  <MaterialIcons name="keyboard-arrow-down" size={24} color="#313061" style={{margin:5}} />
                 </View>
             );
         }
