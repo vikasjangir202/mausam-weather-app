@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, TouchableHighlight, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import HeaderScreen from '../header/HeaderScreen';
 import WeatherScreen from '../weatherBox/WeatherScreen';
 import Forecast from '../DailyForecast/ForecastScreen';
@@ -20,6 +20,6 @@ export default function HomeScreen({navigation}) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#6EFAE6',
+    backgroundColor: '#72EFED',
   },
 });

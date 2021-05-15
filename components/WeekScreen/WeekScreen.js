@@ -27,7 +27,7 @@ export default function WeekScreen({navigation}) {
                                 <AntDesign name="arrowleft" size={24} color="white" style={{padding:10}} />
                             </TouchableHighlight>
                         </View>
-                        <View style={{flexDirection:'row', marginLeft: 50, justifyContent: 'center', alignItems: 'center'}}>
+                        <View style={{flexDirection:'row', marginLeft: 20, justifyContent: 'center', alignItems: 'center'}}>
                             <Text style={{fontSize:24, color: 'white', fontFamily:'Inter-Black', padding:10, fontWeight:'bold'}}>Sardar Shahar</Text>
                             <MaterialIcons name="keyboard-arrow-down" size={24} color="white" style={{padding:10}} />
                         </View>
@@ -51,7 +51,7 @@ export default function WeekScreen({navigation}) {
                     <View>
                         <Text style={{color:'#CBCDD0', fontSize:23, padding:20}}>Next week</Text>
                     </View>
-                    <ScrollView>
+                    <View>
 
                         <View style={{flexDirection:'row', justifyContent: 'space-between', width:'100%', padding:20, height:50, alignItems:'center'}}>
                             <View style={{width:90}}>
@@ -147,7 +147,7 @@ export default function WeekScreen({navigation}) {
                                 <FontAwesome5 name="cloud-sun" size={24} color="orange" />
                             </View>
                         </View>
-                    </ScrollView>
+                    </View>
                 </View>
             );
         }
