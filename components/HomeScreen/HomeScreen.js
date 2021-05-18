@@ -15,7 +15,7 @@ export default function HomeScreen({navigation}) {
   
   async function  getWeather (city) {
     console.log(city);
-    await fetch('https://api.openweathermap.org/data/2.5/weather?q=Sardarshahar, Rajasthan&appid=e78df959427524e5af154906eb33b2df&units=metric')
+    await fetch('https://api.openweathermap.org/data/2.5/weather?q=Sardarshahar, Rajasthan&appid=&units=metric')
       .then((response) => response.json())
       .then((json) => setData(json))
       .catch((error) => console.error(error))
