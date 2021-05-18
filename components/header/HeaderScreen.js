@@ -4,10 +4,10 @@ import Logo from '../logo/LogoScreen';
 import Input from '../SearchScreen/SearchScreen';
 import Constants from 'expo-constants';
 
-function HeaderScreen({navigation, onPress}) {
+function HeaderScreen({navigation, onPress, weatherData}) {
   return (
     <View style={styles.container}>
-      <Logo />
+      <Logo weatherData={weatherData}/>
       <Input onPress={onPress} />
     </View>
   );

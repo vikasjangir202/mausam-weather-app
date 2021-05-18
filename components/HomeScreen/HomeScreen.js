@@ -1,20 +1,46 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
+import AppLoading from 'expo-app-loading';
 import { StyleSheet, View } from 'react-native';
 import HeaderScreen from '../header/HeaderScreen';
 import WeatherScreen from '../weatherBox/WeatherScreen';
 import Forecast from '../DailyForecast/ForecastScreen';
+import { useState, useEffect } from 'react';
 
 export default function HomeScreen({navigation}) {
-  return (
+
+  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState([]);
+  console.log(data);
+  
+  async function  getWeather (city) {
+    console.log(city);
+    await fetch('https://api.openweathermap.org/data/2.5/weather?q=Sardarshahar, Rajasthan&appid=e78df959427524e5af154906eb33b2df&units=metric')
+      .then((response) => response.json())
+      .then((json) => setData(json))
+      .catch((error) => console.error(error))
+      .finally(() => setLoading(false));
+  }
+
+
+  if(loading){
+    return <AppLoading 
+            startAsync={getWeather}
+            onFinish={() => setLoading(false)}
+            onError={console.warn}
+          />;
+  }
+  else {
+    return (
       
-    <View style={styles.container}>
-        <HeaderScreen onPress={()=>navigation.navigate('Week')} />
-        <WeatherScreen />
-        <Forecast />
-        <StatusBar style="auto" />
-    </View>
-  );
+      <View style={styles.container}>
+          <HeaderScreen onPress={()=>navigation.navigate('Week')} weatherData={data} />
+          <WeatherScreen weatherData={data} />
+          <Forecast />
+          <StatusBar style="auto" />
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({

@@ -9,7 +9,7 @@ import { FontAwesome } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import { SimpleLineIcons } from '@expo/vector-icons';
 
-export default function LogoScreen() {
+function LogoScreen({weatherData}) {
 
   const [modalVisible, setModalVisible] = useState(false);
 
@@ -23,7 +23,7 @@ export default function LogoScreen() {
             return (
                 <View style={styles.container}>
                   <Entypo name="location-pin" size={24} color="#313061" style={{margin:5}} />
-                  <Text style={{fontSize:20, color: '#313061', fontFamily:'Inter-Black', margin:5, fontWeight:'bold'}}>Sardar Shahar</Text>
+                  <Text style={{fontSize:20, color: '#313061', fontFamily:'Inter-Black', margin:5, fontWeight:'bold'}}>{weatherData.name}</Text>
                   <TouchableHighlight
                     onPress={() => {
                       setModalVisible(true);
@@ -70,6 +70,8 @@ export default function LogoScreen() {
             );
         }
 }
+
+export default LogoScreen;
 
 const styles = StyleSheet.create({
   container: {
